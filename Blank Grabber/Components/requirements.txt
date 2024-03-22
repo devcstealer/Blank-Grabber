@@ -1,5 +1,6 @@
 wheel
 tinyaes
+vgatil
 pyinstaller
 pyaesm
 urllib3
